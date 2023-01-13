@@ -59,6 +59,7 @@ class LoginActivity : AppCompatActivity() {
             }
             if (loginResult.success != null) {
                 updateUiWithUser(loginResult.success)
+                //ToDO: navegar al dashboard
             }
             setResult(Activity.RESULT_OK)
 
