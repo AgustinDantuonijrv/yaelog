@@ -1,6 +1,7 @@
 package com.example.yaelog.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -27,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         val username = binding.username
         val password = binding.password
