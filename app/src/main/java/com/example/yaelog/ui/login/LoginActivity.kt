@@ -15,6 +15,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.yaelog.databinding.ActivityLoginBinding
 import com.example.yaelog.R
+import com.example.yaelog.dashboard.DashboardActivity
 
 
 class LoginActivity : AppCompatActivity() {

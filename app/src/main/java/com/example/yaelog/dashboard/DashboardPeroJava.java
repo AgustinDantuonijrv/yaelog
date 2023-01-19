@@ -6,11 +6,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.yaelog.databinding.ActivityDashboardBinding;
+import com.example.yaelog.ui.login.LoginFormStatePeroJava;
 
 public class DashboardPeroJava extends AppCompatActivity {
 
     private ActivityDashboardBinding binding; // == private lateinit var binding: ActivityDashboardBinding
     private Integer numResult = 0;// == private var numResult: Int = 0
+    public LoginFormStatePeroJava state;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -18,7 +20,15 @@ public class DashboardPeroJava extends AppCompatActivity {
         binding = ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        numResult = nombre_de_la_funcion(10,8);
+        if (state.getUsernameError() > 5) {
+            numResult = nombre_de_la_funcion(10, 8);
+        } else {
+            state.setUsernameError(state.getUsernameError() + 1);
+        }
+        // for
+        for (int i = state.getUsernameError(); i < 5 ; i++){
+           state.setUsernameError(state.getUsernameError() + i);
+        }
     }
 
     public Integer nombre_de_la_funcion(Integer numA, Integer numB)  {
